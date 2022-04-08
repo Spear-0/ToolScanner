@@ -12,6 +12,12 @@ import (
 	"gopkg.in/yaml.v2"
 )
 
+var VERSION string = "v0.1"
+
+func banner() {
+	fmt.Printf("\tToolScanner %s\n", VERSION)
+}
+
 type Yaml2Config struct {
 	Request struct {
 		Method string `yaml:"method"`
@@ -32,12 +38,14 @@ type Yaml2Config struct {
 }
 
 func main() {
+	banner()
 	/**
 	* 获取输入参数
 	 */
-	var host = flag.String("s", "", "Server Address")
-	var port = flag.Int("p", 0, "Server Port")
+	var host = flag.String("s", "", "Target Address")
+	var port = flag.Int("p", 0, "Target Port")
 	flag.Parse()
+
 	log.Printf("[*] target server: %s, target port: %d", *host, *port)
 	var target = fmt.Sprintf("%s:%d", *host, *port)
 
@@ -171,3 +179,5 @@ func TCPaser(yamlconfig Yaml2Config, conn net.Conn) {
 	//log.Printf("%s", string(buf[:len]))
 	return
 }
+
+//Mf5pknzyxgP1YTmhG
