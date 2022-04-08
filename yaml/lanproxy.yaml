@@ -1,0 +1,13 @@
+name: proxy tool lanproxy detect
+protect : http
+tool:
+  tool_name: LanProxy
+  tool_version: 
+request:
+  method  : GET
+  path    : 
+  data    : 
+response:
+  pcre_body  : "window\x2elocation\x2ehref\x20\x3d\x20\x22\x2flanproxy-config\x2f\x22"
+  pcre_header: 
+    Server: LPS
