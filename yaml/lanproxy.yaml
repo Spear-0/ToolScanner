@@ -1,5 +1,5 @@
 name: proxy tool lanproxy detect
-protect : http
+protocol: http
 tool:
   tool_name: LanProxy
   tool_version: 

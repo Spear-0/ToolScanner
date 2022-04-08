@@ -1,0 +1,15 @@
+name: C2 tool CobaltStrike-v4.x detect
+protocol : http
+tool:
+  tool_name: CobaltStrike-HTTP
+  tool_version: v4.x
+request:
+  method  : POST
+  path    : /
+  data    : 
+response:
+  pcre_body  : 
+  pcre_status: "404\x20Not\x20Found"
+  pcre_header: 
+    Content-Type: "text/plain"
+    Content-Length: "^0$"
