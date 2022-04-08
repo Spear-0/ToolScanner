@@ -24,3 +24,22 @@
     pcre_header:匹配header格式为key: value 
     
     pcre_status:匹配响应首行
+
+### tcp yaml编写
+
+1、name
+
+2、ptotect
+
+3、tool
+
+    tool_name
+
+    tool_version
+4、request
+
+    data: 请求数据
+
+5、response
+
+    pcre_body: 相应匹配规则，默认接受2048字节的数据
