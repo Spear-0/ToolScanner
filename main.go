@@ -39,19 +39,12 @@ type Yaml2Config struct {
 
 func main() {
 	banner()
-	/**
-	* 获取输入参数
-	 */
 	var host = flag.String("s", "", "Target Address")
 	var port = flag.Int("p", 0, "Target Port")
 	flag.Parse()
 
 	log.Printf("[*] target server: %s, target port: %d", *host, *port)
 	var target = fmt.Sprintf("%s:%d", *host, *port)
-
-	/**
-	* 获取yaml文件
-	 */
 	yamls, err := ioutil.ReadDir("yaml/")
 	if err != nil {
 		log.Fatal("[-] get yaml fail")
@@ -121,7 +114,6 @@ func HTTPParse(yamlconfig Yaml2Config, url string) {
 	} else {
 		isMatchBody = true
 	}
-	// log.Println(resp.Status)
 	if yamlconfig.Response.Pcre_status != "" {
 		match, err := regexp.MatchString(yamlconfig.Response.Pcre_status, resp.Status)
 		if err != nil {
@@ -176,7 +168,6 @@ func TCPaser(yamlconfig Yaml2Config, conn net.Conn) {
 	if match {
 		log.Printf("[%s %s]", yamlconfig.Tool.Tool_name, yamlconfig.Tool.Tool_version)
 	}
-	//log.Printf("%s", string(buf[:len]))
 	return
 }
 
