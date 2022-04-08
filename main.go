@@ -238,4 +238,6 @@ func TCPPaser(yamlconfig Yaml2Config, target string) {
 	}
 	return
 }
-func UDPPser(yamlconfig Yaml2Config) {}
+func UDPPaser(yamlconfig Yaml2Config, target string) {}
+
+func DNSPaser(yamlconfig Yaml2Config, target string) {}
