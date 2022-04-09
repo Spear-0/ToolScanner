@@ -1,9 +1,0 @@
-name: c2 tool cobaltstrike detect
-protect : tcp
-tool:
-  tool_name: CobaltStrike-HTTP
-  tool_version: 3.x
-request:
-  data    : "GET\x20\x2fzOPD\x20HTTP\x2f1\x2e1\x0d\x0aConnection\x3a\x20Keep-Alive\x0d\x0aCache-Control\x3a\x20no-cache\x0d\x0a\x0d\x0a"
-response:
-  pcre_body  : "(404\x20Not\x20Found|200\x20OK)\x20\x0d\x0a"
