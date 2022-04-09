@@ -1,0 +1,17 @@
+name: Proxy tool FRP detect
+protocol : tcp
+tool:
+  tool_name: FRP
+  tool_version: 
+request:
+  data:
+    - x
+    - y
+    - z
+response:
+  pcre_body:
+    - 1
+    - 2
+    - "(404\x20Not\x20Found|200\x20OK)\x20\x0d\x0a"
+  pcre_header:
+    add: ddd
